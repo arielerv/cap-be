@@ -8,5 +8,8 @@ module.exports = model('User', new Schema({
     surname: {type: String, required: true},
     documentId: {type: Number},
     disabled: {type: Boolean},
-    roles: [{type: String, required: true, ref: 'Roles'}]
+    roles: [{type: String, required: true, ref: 'Roles'}],
+    birthday: {type: Date},
+    state: {type: String},
+    telephone: {type: String}
 }, {collection: 'users', timestamps: true}));
